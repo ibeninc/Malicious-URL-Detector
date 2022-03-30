@@ -38,7 +38,8 @@ def submitCallBack():
         answer = tkMessageBox.askquestion("Redirect","Do you want to visit the url?")
         if answer == 'yes':
                 #webbrowser.open(url=E1.get(), new=1)
-                chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+                # chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+                chrome_path = 'C:\Users\HP\AppData\Local\Google\Chrome\Application\chrome.exe %s'
                 webbrowser.get(chrome_path).open(url=E1.get(),new=1)
     elif int(a[1]) == 1:
         tkMessageBox.showinfo("URL Checker Result", "The URL " + url + " is Malicious")
@@ -50,10 +51,10 @@ def submitCallBack():
         tkMessageBox.showwarning("Warning","Cant Redirect, url contains a malware")
 
 def about():
-    tkMessageBox.showinfo("About","Authors: vijay maripi")
+    tkMessageBox.showinfo("About Software","built by Henry Ananti")
 
 
-B2 = Button(root, text="About", command=about)
+B2 = Button(root, text="Author", command=about)
 B1 = Button(bottomframe, text="Submit", command=submitCallBack)
 B2.pack(side=RIGHT, padx=5, pady=5)
 B1.pack(side=RIGHT, padx=5,pady=5)
